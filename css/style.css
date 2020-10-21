@@ -1,0 +1,38 @@
+/* GLOBAL */
+*, *:after, *:before {
+    box-sizing: border-box;
+}     
+html {
+    font-size: 62.5%;       /*1rem =10px*/
+}    
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+/*--BODY--*/
+body {
+    background-color: #353535;
+    font-family: 'Oswald', Arial, Helvetica, sans-serif;
+}
+main {
+    
+}
+h1 {
+    font-size: 3rem;
+    color: #fff;
+    font-weight: 600;
+    width: auto;
+}
+/*---ASIDE-NAV---*/
+aside {
+
+}
+aside a {
+    color: #fff;
+    font-size: 2rem;
+}
+aside a:hover {
+    transform: scale(1.05);
+    transition: 0.3s ease-in;
+}
