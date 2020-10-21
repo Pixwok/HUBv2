@@ -61,3 +61,54 @@ h1 {
     color: #fff;
     font-weight: 600;
 }
+/*POPUP*/
+.container {
+    position: absolute;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.popup {
+    width: 280px;
+    height: 240px;
+    background-color: #fff;
+    border-radius: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.popup a {
+    color: #333333;
+    font-size: 1.5rem;
+    align-self: flex-end;
+    margin-top: -40px;
+    padding: 1.5rem 0;
+}
+#loginForm {
+    display: none;
+}
+.form-login {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+.form-login>input {
+    margin-top: 1rem;
+    border-radius: 20px;
+    height: 40px;
+    background-color: #e6e6e6;
+    border: none;
+    padding: 0 30px;
+}
+#login:focus::-moz-placeholder, #passwd:focus::-moz-placeholder {
+    opacity: 0;
+}
+.btn-apply {
+    background-color: #159bf1 !important; 
+    color: #e6e6e6;
+    font-weight: 600;
+}
+.btn-apply:hover {
+    background-color: #333333 !important;
+    cursor: pointer;
+}

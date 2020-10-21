@@ -21,7 +21,7 @@
                     <li><a href=""><i class="fas fa-trash"></i></a></li>
                 </ul>
                 <?php if ( session_status() === PHP_SESSION_NONE ): ?>
-                    <a href="login.php"><i class="fas fa-user-alt"></i></a>
+                    <a href="javascript:void(0)" onclick="document.getElementById('loginForm').style.display = 'flex';"><i class="fas fa-user-alt"></i></a>
                 <?php elseif ( session_status() === PHP_SESSION_ACTIVE ): ?>
                     <a href="deconnexion.php"><i class="fas fa-sign-out-alt"></i></a>
                 <?php endif; ?>
@@ -29,7 +29,17 @@
         </aside>
         <section>
             <h1>HUB d'application de Pixwok</h1>
-            
+            <div class="container">
+            <div class="popup" id="loginForm">
+                <form action="php/auth.php" class="form-login" method="post">
+                    <a href="javascript:void(0)" onclick="document.getElementById('loginForm').style.display = 'none';"><i class="fas fa-times"></i></a>
+                    <input id="login" type="text" placeholder="pseudo" name="pseudo" required>
+                    <input id="passwd" type="password" placeholder="Password" name="passwd" required>
+
+                    <input type="submit" name="login" class="btn-apply" value="Login">
+                </form>
+            </div>
+            </div>
         </section>
     </main>
 </body>
