@@ -4,6 +4,7 @@
 }     
 html {
     font-size: 62.5%;       /*1rem =10px*/
+    height: 100%;
 }    
 img {
     max-width: 100%;
@@ -14,25 +15,49 @@ img {
 body {
     background-color: #353535;
     font-family: 'Oswald', Arial, Helvetica, sans-serif;
+    height: 100%;
 }
 main {
-    
+    height: 100%;
+    display: flex;
+    position: relative;
 }
-h1 {
-    font-size: 3rem;
-    color: #fff;
-    font-weight: 600;
-    width: auto;
+#particles-js {
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 /*---ASIDE-NAV---*/
 aside {
-
+    height: 100%;
+    width: 50px;
+    background: rgba(17, 17, 17, 0.75);
 }
-aside a {
+aside>nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0 25px 0;
+}
+aside li {
+    margin-bottom: 10px;
+}
+aside a, aside a:visited{
     color: #fff;
     font-size: 2rem;
 }
 aside a:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease-in;
+    color: #c3c3c3;
+}
+/*---SECTION---*/
+section {
+    width: 90%;
+    margin: 20px auto;
+}
+h1 {
+    font-size: 3.5rem;
+    color: #fff;
+    font-weight: 600;
 }

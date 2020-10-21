@@ -10,6 +10,9 @@
     <title>HUB - Pixwok</title>
 </head>
 <body>
+    <div id="particles-js"></div>
+    <script src="js/particles.js"></script>
+    <script src="js/app.js"></script>
     <main>
         <aside>
             <nav>
@@ -26,7 +29,7 @@
         </aside>
         <section>
             <h1>HUB d'application de Pixwok</h1>
-
+            
         </section>
     </main>
 </body>
