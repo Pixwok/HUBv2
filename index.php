@@ -17,6 +17,13 @@ if (isset($_POST['login'])) {
         $error = TRUE;
     }
 }
+
+//Récupération de la liste des boutons et des TAGS
+$bres = $connexion->query("SELECT * FROM button");
+$dbutton = $bres->fetchALL();
+
+$tres = $connexion->query("SELECT * FROM tag");
+$dtag = $tres->fetchALL();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -68,7 +75,7 @@ if (isset($_POST['login'])) {
                         <input type="text" name="link" id="link" required>
                         <select name="tag" id="tag" required>
                             <option value="">Choix du tag</option>
-                            <?php foreach ($data as $value): ?>
+                            <?php foreach ($dtag as $value): ?>
                                 <option value="<?=$value['id']?>"><?=$value['nom']?></option>
                             <?php endforeach; ?>
                         </select>
@@ -82,7 +89,7 @@ if (isset($_POST['login'])) {
                         <a href="javascript:void(0)" onclick="document.getElementById('removeForm').style.display = 'none';"><i class="fas fa-times"></i></a>
                         <select name="tag" id="tag" required>
                             <option value="">Sélectionner un bouton</option>
-                            <?php foreach ($data as $value): ?>
+                            <?php foreach ($dbutton as $value): ?>
                                 <option value="<?=$value['id']?>"><?=$value['title']?></option>
                             <?php endforeach; ?>
                             <input type="submit" name="removeButton" value="Supprimer">
