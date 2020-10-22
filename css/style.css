@@ -69,13 +69,9 @@ h1 {
     justify-content: center;
 }
 .popup {
-    width: 280px;
-    height: 240px;
     background-color: #fff;
     border-radius: 10%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    box-shadow: 3px 3px 2px #111111;
 }
 .popup a {
     color: #333333;
@@ -85,6 +81,13 @@ h1 {
     padding: 1.5rem 0;
 }
 #loginForm {
+    width: 280px;
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#loginForm, #addForm, #removeForm {
     display: none;
 }
 .form-login {
@@ -111,4 +114,27 @@ h1 {
 .btn-apply:hover {
     background-color: #333333 !important;
     cursor: pointer;
+}
+/*POPUP REMOVE ET ADD*/
+
+/*ERREUR BOX*/
+.container-error {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.error-box {
+    width: 200px;
+    height: 50px;
+    background-color: rgba(255, 93, 93, 0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.error-box>span {
+    color: #fff;
+    font-size: 1.7rem;
 }
