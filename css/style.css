@@ -103,7 +103,7 @@ h1 {
     border: none;
     padding: 0 30px;
 }
-#login:focus::-moz-placeholder, #passwd:focus::-moz-placeholder {
+#login:focus::-moz-placeholder, #passwd:focus::-moz-placeholder, #title:focus::-moz-placeholder, #link:focus::-moz-placeholder {
     opacity: 0;
 }
 .btn-apply {
@@ -116,7 +116,72 @@ h1 {
     cursor: pointer;
 }
 /*POPUP REMOVE ET ADD*/
-
+#addForm {
+    width: 800px;
+    height: 244px;
+    border-radius: 10px;
+    justify-content: center;
+}
+#addForm>form{
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#addForm input {
+    margin-top: 1.5rem;
+    height: 30px;
+}
+#addForm select {
+    margin-top: 1.5rem;
+    width: 25%;
+}
+#title, #link {
+    border: none;
+    border-radius: 20px;
+    height: 40px;
+    background-color: #e6e6e6;
+    padding: 0 30px;
+}
+.btn-save {
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: #fefefe;
+    box-shadow: 0px 3px 5px 1px rgba(0, 123, 255, 0.6);
+    transition: 0.3s;
+    width: 20%;
+    align-self: flex-end;
+    margin: 0 !important;
+}
+.btn-save:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+#removeForm select, #addForm select {
+    border: none;
+    box-shadow: 1px 1px 2px #007bff;
+    padding: 3px;
+}
+#removeForm {
+    width: 300px;
+    height: 135px;
+    border-radius: 10px;
+}
+#removeForm .btn-save {
+    width: 30%;
+}
+#removeForm select {
+    margin-bottom: 10px;
+}
+#removeForm>form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 /*ERREUR BOX*/
 .container-error {
     position: absolute;

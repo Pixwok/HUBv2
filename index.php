@@ -71,15 +71,15 @@ $dtag = $tres->fetchALL();
                 <div class="popup" id=addForm>
                     <form action="" method="post">
                         <a href="javascript:void(0)" onclick="document.getElementById('addForm').style.display = 'none';"><i class="fas fa-times"></i></a>
-                        <input type="text" name="title" id="title" required>
-                        <input type="text" name="link" id="link" required>
+                        <input type="text" name="title" id="title" placeholder="Nom du bouton" required>
+                        <input type="text" name="link" id="link" placeholder="Lien" required>
                         <select name="tag" id="tag" required>
                             <option value="">Choix du tag</option>
                             <?php foreach ($dtag as $value): ?>
                                 <option value="<?=$value['id']?>"><?=$value['nom']?></option>
                             <?php endforeach; ?>
                         </select>
-                        <input type="submit" name="addButton" value="Ajouter">
+                        <input class="btn-save" type="submit" name="addButton" value="Ajouter">
                     </form>
                 </div>
             </div>
@@ -92,7 +92,7 @@ $dtag = $tres->fetchALL();
                             <?php foreach ($dbutton as $value): ?>
                                 <option value="<?=$value['id']?>"><?=$value['title']?></option>
                             <?php endforeach; ?>
-                            <input type="submit" name="removeButton" value="Supprimer">
+                            <input class="btn-save" type="submit" name="removeButton" value="Supprimer">
                         </select>
                     </form>
                 </div>
