@@ -4,7 +4,6 @@ include('php/connexion.php');
 //Système de connexion
 session_start();
 
-print_r($_SESSION['login']);
 //Récupération de la liste des boutons et des TAGS
 $bres = $connexion->query("SELECT * FROM button");
 $dbutton = $bres->fetchALL();
@@ -64,7 +63,7 @@ $dtag = $tres->fetchALL();
                         <select name="tag" id="tag" required>
                             <option value="">Choix du tag</option>
                             <?php foreach ($dtag as $value): ?>
-                                <option value="<?=$value['id']?>"><?=$value['nom']?></option>
+                                <option value="<?=$value['nom']?>"><?=$value['nom']?></option>
                             <?php endforeach; ?>
                         </select>
                         <input class="btn-save" type="submit" name="addButton" value="Ajouter">
@@ -84,6 +83,15 @@ $dtag = $tres->fetchALL();
                         </select>
                     </form>
                 </div>
+            </div>
+            <div class='btn-container'>
+                <?php foreach ($dbutton as $value): ?>
+                    <a target="blank" href="<?=$value['link']?>">
+                        <div class="<?=$value['nom_tag']?>">
+                            <?=$value['title']?>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
             </div>
 
             <?php if (isset($_SESSION['error'])): ?>
