@@ -5,7 +5,7 @@ session_start();
 if (isset($_POST['addButton'])) {
     $title = htmlspecialchars($_POST['title']);
     $link = htmlspecialchars($_POST['link']);
-    $tag = $_POST['tag'];
+    $tag = htmlspecialchars($_POST['tag']);
     $requeste = "INSERT INTO button (id, title, nom_tag, link)
                             VALUES (NULL,'$title','$tag','$link')";
     if (!empty($_SESSION['login'])) {
@@ -14,7 +14,7 @@ if (isset($_POST['addButton'])) {
     header('Location: ../index.php');
 }
 if (isset($_POST['removeButton'])) {
-    $btn = $_POST['btn'];
+    $btn = htmlspecialchars($_POST['btn']);
     $requeste = "DELETE FROM button WHERE id='".$btn."'";
     if (!empty($_SESSION['login'])) {
         $res = $connexion->exec($requeste);
